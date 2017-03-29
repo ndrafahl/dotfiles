@@ -30,6 +30,8 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'https://github.com/sheerun/vim-polyglot'
 " Plugin for status bar
 Plugin 'itchyny/lightline.vim'
+" Plugin for onedark theme
+Plugin 'https://github.com/joshdick/onedark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
