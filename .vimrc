@@ -36,6 +36,9 @@ Plugin 'https://github.com/joshdick/onedark.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+set tabstop=4
+set shiftwidth=4
+set expandtab
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -63,6 +66,10 @@ if (empty($TMUX))
   if (has("termguicolors"))
     set termguicolors
   endif
+endif
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 let g:lightline = {
